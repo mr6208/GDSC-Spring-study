@@ -19,19 +19,19 @@ public class Comment {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String comment;
 
-    @Column(name = "createAt")
+    @Column(name = "create_at")
     @CreatedDate
     private String createAt;
 
-    @Column(name = "modifiedAt")
+    @Column(name = "modified_at")
     @LastModifiedDate
     private String modifiedAt;
 
     @ManyToOne
-    @JoinColumn(name = "postId")
+    @JoinColumn(name = "post_id")
     private Post post;
 
-    @ManyToOne
-    @JoinColumn(name = "userId")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private User user;
 }
