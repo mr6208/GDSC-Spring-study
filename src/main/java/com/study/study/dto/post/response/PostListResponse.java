@@ -1,4 +1,4 @@
-package com.study.study.dto.response;
+package com.study.study.dto.post.response;
 
 
 import lombok.AllArgsConstructor;

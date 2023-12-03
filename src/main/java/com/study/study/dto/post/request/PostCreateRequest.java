@@ -1,16 +1,14 @@
-package com.study.study.dto.response;
-
+package com.study.study.dto.post.request;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
-@Builder
 @AllArgsConstructor
-public class PostResponse {
+@NoArgsConstructor
+public class PostCreateRequest {
 
-    private Long id;
     private String title;
     private String content;
 }

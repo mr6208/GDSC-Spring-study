@@ -1,4 +1,4 @@
-package com.study.study.dto.request;
+package com.study.study.dto.post.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,9 +1,9 @@
 package com.study.study.service;
 
-import com.study.study.dto.request.PostCreateRequest;
-import com.study.study.dto.request.PostUpdateRequest;
-import com.study.study.dto.response.PostListResponse;
-import com.study.study.dto.response.PostResponse;
+import com.study.study.dto.post.request.PostCreateRequest;
+import com.study.study.dto.post.request.PostUpdateRequest;
+import com.study.study.dto.post.response.PostListResponse;
+import com.study.study.dto.post.response.PostResponse;
 import com.study.study.entity.Post;
 import com.study.study.mapper.PostMapper;
 import com.study.study.repository.PostRepository;

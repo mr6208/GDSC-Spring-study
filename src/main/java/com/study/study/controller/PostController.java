@@ -1,9 +1,9 @@
 package com.study.study.controller;
 
-import com.study.study.dto.request.PostCreateRequest;
-import com.study.study.dto.request.PostUpdateRequest;
-import com.study.study.dto.response.PostListResponse;
-import com.study.study.dto.response.PostResponse;
+import com.study.study.dto.post.request.PostCreateRequest;
+import com.study.study.dto.post.request.PostUpdateRequest;
+import com.study.study.dto.post.response.PostListResponse;
+import com.study.study.dto.post.response.PostResponse;
 import com.study.study.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 public class PostController {
 
     private final PostService postService;
-
 
     // 생성
     @PostMapping
@@ -29,7 +28,6 @@ public class PostController {
         return ResponseEntity.ok(postService.findAll());
     }
 
-
     // 단건조회
     @GetMapping("/{id}")
     public ResponseEntity<PostResponse> findById(@PathVariable Long id) {
@@ -41,7 +39,6 @@ public class PostController {
     public ResponseEntity<PostResponse> updatePost(@RequestBody PostUpdateRequest postUpdateRequest) {
         return ResponseEntity.ok(postService.updatePost(postUpdateRequest));
     }
-
 
     // soft delete
     @DeleteMapping("{id}")
