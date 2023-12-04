@@ -24,14 +24,13 @@ public class CommentController {
         return ResponseEntity.ok(commentService.createComment(id, request));
     }
 
-    // 전체 조회
+    // 게시판 기준 전체 조회
     @GetMapping("/{id}")
     public ResponseEntity<CommentListResponse> findAllByPostId(@PathVariable Long id) {
         return ResponseEntity.ok(commentService.findAllByPostId(id));
     }
 
     // 업데이트
-    @Transactional
     @PutMapping
     public ResponseEntity<CommentResponse> updateComment(@RequestBody CommentUpdateRequest request) {
         return ResponseEntity.ok(commentService.updateComment(request));
